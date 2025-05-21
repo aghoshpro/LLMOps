@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  myenvx:
+    build:
+      context: .
+    ports:
+      - "8888:8888" # Jupyter Notebook
+      - "11434:11434" # Ollama server
+    volumes:
+      - ./notebooks:/home/myenv/notebooks
+      - ./requirements.txt:/home/myenv/requirements.txt
+    stdin_open: true
+    tty: true

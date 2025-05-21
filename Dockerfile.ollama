@@ -1,0 +1,37 @@
+# Use a Debian base for Ollama compatibility
+FROM debian:bookworm
+
+# System setup
+RUN apt-get update && apt-get install -y \
+    curl gnupg python3 python3-pip python3-venv build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Create virtual environment
+ENV VIRTUAL_ENV=/home/myenv
+RUN python3 -m venv $VIRTUAL_ENV
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
+
+# Install Jupyter and dependencies
+RUN pip install --no-cache-dir --upgrade pip && pip install --no-cache-dir notebook
+
+# Install Ollama (latest)
+RUN curl -fsSL https://ollama.com/install.sh | sh
+
+# Pull the desired model (e.g., llama3)
+RUN /root/.ollama/bin/ollama pull llama3
+
+# Expose ports for both Jupyter and Ollama
+EXPOSE 8888 11434
+
+# Set working directory
+WORKDIR /home/myenv
+
+# Copy requirements
+COPY requirements.txt /home/myenv/requirements.txt
+
+# Install Python packages
+RUN pip install --no-cache-dir -r /home/myenv/requirements.txt
+
+# Run both Jupyter and Ollama server in background
+CMD bash -c "/root/.ollama/bin/ollama serve & \
+             jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root"

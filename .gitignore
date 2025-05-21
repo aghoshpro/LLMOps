@@ -1,0 +1,11 @@
+myenv
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.pdf
+*.sqlite3
+*.ipynb_checkpoints/
+osmnx
+cache
