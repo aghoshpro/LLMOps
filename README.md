@@ -1,21 +1,21 @@
-# Lanchain Sandbox
+# LangChain Sandbox
 
-## Using Docker 🐳
+## Docker 🐳 Pipeline (Ollama + Jupyter)
 
-- Go to location using cmd or terminal
+- To run
 
-```sh
-cd env_docker
-```
+  ```sh
+  docker compose -f docker-compose.yml up
+  ```
 
-- Run docker compose
-
-```sh
-docker compose -f docker-compose.yml up
-```
-
-- Stop the docker compose
+- Tp stop
 
   ```sh
   docker-compose -f docker-compose.yml down --volumes --rmi all 
   ```
+
+# References
+
+1. [LangChain](https://github.com/Coding-Crashkurse/Langchain-Full-Course)
+2. [LanChainJs](https://github.com/Coding-Crashkurse/LangChain-JS-Full-Course)
+3. [Sophia Yang](https://github.com/sophiamyang/tutorials-LangChain/tree/main)

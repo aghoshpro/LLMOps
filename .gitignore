@@ -1,11 +1,14 @@
 myenv
 __pycache__/
+tempCodeRunner.py
 *.pyc
 *.pyo
 *.pyd
 *.log
 *.pdf
+*.bin
 *.sqlite3
 *.ipynb_checkpoints/
 osmnx
 cache
+

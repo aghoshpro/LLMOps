@@ -6,6 +6,8 @@ polars
 matplotlib
 seaborn
 plotly
+panel
+jupyter_bokeh
 scikit-learn
 jupyter
 networkx
@@ -33,3 +35,4 @@ onnx>=1.17.0
 protobuf==5.29.2
 chromadb>=0.4.22
 pydantic==2.10.4
+docarray
