@@ -9,6 +9,7 @@ load_dotenv(override=True)
 openai_api_key = os.getenv('OPENAI_API_KEY')
 anthropic_api_key = os.getenv('ANTHROPIC_API_KEY')
 google_api_key = os.getenv('GOOGLE_API_KEY')
+ollama_api_key = os.getenv('OLLAMA_API')
 
 if openai_api_key:
     print(f"OpenAI API Key exists and begins {openai_api_key[:8]}")
@@ -24,6 +25,12 @@ if google_api_key:
     print(f"Google API Key exists and begins {google_api_key[:8]}")
 else:
     print("Google API Key not set")
+
+if ollama_api_key:
+    print(f"Ollama API Key exists and begins {ollama_api_key[:8]}")
+else:
+    print("Ollama API Key not set")
+
 
 
 # Connect to OpenAI, Anthropic

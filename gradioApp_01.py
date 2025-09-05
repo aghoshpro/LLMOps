@@ -14,7 +14,7 @@ load_dotenv(override=True)
 # Connect to OpenAI, Anthropic
 OPENAI = OpenAI()
 MODEL_IN_USE = "gpt-4o-mini" # 'gpt-4.1-mini', 'gpt-4.1-nano', 'gpt-4.1-turbo', 'gpt-4.1'
-system_message = "You are a helpful assistant that responds in markdown" # "You are an assistant that is great at telling quarky jokes"
+system_message = "You are a helpful assistant that responds in markdown" # "You are an assistant that is great at telling quirky jokes"
 user_prompt = "Tell a light-hearted joke for an audience of biologists"
 prompts = [
     {"role": "system", "content": system_message},
@@ -87,11 +87,11 @@ def stream_model(prompt, model):
     else:
         raise ValueError("Unknown model")
     yield from result
-## Gradio
 
+## Gradio
 view = gr.Interface(
     fn=stream_model,
-    inputs=[gr.Textbox(label="Your message:", lines=6), gr.Dropdown(["GPT", "Claude", "Ollama"], label="Select model", value="GPT")],
+    inputs=[gr.Textbox(label="Your Query:", lines=6), gr.Dropdown(["GPT", "Claude", "Ollama"], label="Select model", value="GPT")],
     outputs=[gr.Markdown(label="Response:")],
     flagging_mode="never"
 ).launch()

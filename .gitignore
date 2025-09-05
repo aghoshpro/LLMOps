@@ -1,1 +1,12 @@
-.env.example
+.env
+.gradio/
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.pdf
+*.bin
+*.sqlite3
