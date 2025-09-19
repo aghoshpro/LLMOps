@@ -1,22 +1,27 @@
-# Local Environment Setup
+## Local Environment Setup
 
 ### If `pyproject.toml` file is given then run the following to sync
 
 ```sh
 uv sync
 ```
+
 ### Else
 
 ### Initialize `uv` pkg manager
+
 ```sh
 uv init
 ```
 
 ### Install venv
+
 ```sh
 uv venv --python 3.13  
 ```
+
 #### OUTPUT
+
 ```
 Using CPython 3.13.3
 Creating virtual environment at: .venv (ignored by github)
@@ -29,13 +34,14 @@ Activate with: .venv\Scripts\activate
 .venv\Scripts\activate
 ```
 
-### Add pkg 
+### Add pkg
 
 ```sh
 uv add scipy
 ```
 
 #### OUTPUT
+
 ```
 (test_llm) Z:\Git_PhD\test\test_llm>uv add flask 
 Resolved 9 packages in 164ms
@@ -52,8 +58,8 @@ Installed 2 packages in 2.06s
 uv add -r requirements.txt
 ```
 
-### if `pyproject.toml` file is given then run the following
+## Start experiemnting with `jupyter lab`
 
 ```sh
-uv sync
+jupyter lab
 ```

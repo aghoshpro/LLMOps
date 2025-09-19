@@ -1,5 +1,5 @@
 [project]
-name = "langchain-sandbox"
+name = "llm_ops"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -13,6 +13,7 @@ dependencies = [
     "feedparser>=6.0.11",
     "google-generativeai>=0.8.5",
     "gradio>=5.44.1",
+    "huggingface>=0.0.1",
     "ipywidgets>=8.1.7",
     "jupyter-dash>=0.4.2",
     "jupyterlab>=4.4.7",

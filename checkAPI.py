@@ -12,24 +12,24 @@ google_api_key = os.getenv('GOOGLE_API_KEY')
 ollama_api_key = os.getenv('OLLAMA_API')
 
 if openai_api_key:
-    print(f"OpenAI API Key exists and begins {openai_api_key[:8]}")
+    print(f"🟢 OpenAI API Key exists ({openai_api_key[:8]})")
 else:
-    print("OpenAI API Key not set")
+    print("🔴 OpenAI API Key not set")
     
 if anthropic_api_key:
-    print(f"Anthropic API Key exists and begins {anthropic_api_key[:7]}")
+    print(f"🟢 Anthropic API Key exists")
 else:
-    print("Anthropic API Key not set")
+    print("🔴 Anthropic API Key not set")
 
 if google_api_key:
-    print(f"Google API Key exists and begins {google_api_key[:8]}")
+    print(f"🟢 Google API Key exists")
 else:
-    print("Google API Key not set")
+    print("🔴 Google API Key not set")
 
 if ollama_api_key:
-    print(f"Ollama API Key exists and begins {ollama_api_key[:8]}")
+    print(f"🟢 Ollama API Key exists")
 else:
-    print("Ollama API Key not set")
+    print("🔴 Ollama API Key not set")
 
 
 
@@ -50,6 +50,8 @@ completion = OPENAI.chat.completions.create(
     model= MODEL_IN_USE,
     messages=prompts,
     temperature=0.5)
-print('\n\n')
+print('\n')
+print('*********************** AI ***********************')
 print(completion.choices[0].message.content)
-print('\n\n')
+print('********************** EOF **********************')
+print('\n')
