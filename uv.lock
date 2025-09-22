@@ -2170,6 +2170,19 @@ wheels = [
 ]
 
 [[package]]
+name = "langchain-ollama"
+version = "0.3.7"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "langchain-core" },
+    { name = "ollama" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c1/34/c94ec1ea0f1bae7ed4e8a05c79bdf7f49a5f0b5af1a9a0da88ace03450a7/langchain_ollama-0.3.7.tar.gz", hash = "sha256:9deeca09a44fb8c5a46b1e43d670a7301f1d1e73196fa9191a89f9883217903b", size = 31924, upload-time = "2025-08-22T20:42:46.814Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b9/df/5d92427eabc2b070689de9d37ea90636ea51c1ec0ee75c362fa1995201cc/langchain_ollama-0.3.7-py3-none-any.whl", hash = "sha256:845192a75a1671bd36bc8c54baae2e929c3b1b0e3c8c618438df20354b0231de", size = 24905, upload-time = "2025-08-22T20:42:45.641Z" },
+]
+
+[[package]]
 name = "langchain-openai"
 version = "0.3.32"
 source = { registry = "https://pypi.org/simple" }
@@ -2321,6 +2334,7 @@ dependencies = [
     { name = "langchain-chroma" },
     { name = "langchain-community" },
     { name = "langchain-core" },
+    { name = "langchain-ollama" },
     { name = "langchain-openai" },
     { name = "langchain-text-splitters" },
     { name = "llama-index-llms-langchain" },
@@ -2366,6 +2380,7 @@ requires-dist = [
     { name = "langchain-chroma", specifier = ">=0.2.5" },
     { name = "langchain-community", specifier = ">=0.3.29" },
     { name = "langchain-core", specifier = ">=0.3.75" },
+    { name = "langchain-ollama", specifier = ">=0.3.7" },
     { name = "langchain-openai", specifier = ">=0.3.32" },
     { name = "langchain-text-splitters", specifier = ">=0.3.11" },
     { name = "llama-index-llms-langchain", specifier = ">=0.7.1" },
